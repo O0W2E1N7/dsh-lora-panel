@@ -83,6 +83,8 @@ export function apply(ctx) {
           let raw;
           try {
             raw = await readFile(META_PATH, 'utf8');
+            // PowerShell 5.1 的 `-Encoding UTF8` 会写 BOM，JSON.parse 见到 \uFEFF 直接失败
+            if (raw.charCodeAt(0) === 0xfeff) raw = raw.slice(1);
           } catch (error) {
             sendJson(res, 200, {
               ok: false,

@@ -10,7 +10,8 @@
     "trigger": "@sl0p",
     "default_weight": 0.6,
     "loader": "LoraLoaderModelOnly",
-    "note": "Stylised volume and gloss. Above 0.9 the halo and composition start to break."
+    "note": "Stylised volume and gloss. Above 0.9 the halo and composition start to break.",
+    "civitai_base": "MOSS Image"
   },
   "SomeCharacter_Anima_v2.safetensors": {
     "alias": "char2",
@@ -24,6 +25,7 @@
     "trigger_alt": "trigger word not confirmed by the author yet",
     "default_weight": null,
     "loader": "LoraLoader",
-    "note": "Carries text-encoder weights, so chain CLIP as well as MODEL."
+    "note": "Carries text-encoder weights, so chain CLIP as well as MODEL.",
+    "civitai_base": "Anima"
   }
 }

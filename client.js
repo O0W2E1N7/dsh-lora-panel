@@ -329,7 +329,14 @@ window.__ModuleLoader__.load({
         })
           .then((response) => {
             if (!response.ok) throw { kind: 'http', status: response.status };
-            return response.json();
+            return response.text().then((body) => {
+              try {
+                return JSON.parse(body);
+              } catch {
+                // Host 回了 200 但 body 不是 JSON：这是响应体坏了，不是请求没到
+                throw { kind: 'parse-failed', detail: 'response body is not valid JSON' };
+              }
+            });
           })
           .then((payload) => {
             if (cancelled) return;
@@ -348,7 +355,7 @@ window.__ModuleLoader__.load({
           })
           .catch((error) => {
             if (cancelled || controller.signal.aborted) return;
-            if (error !== null && typeof error === 'object' && error.kind === 'http') {
+            if (error !== null && typeof error === 'object' && typeof error.kind === 'string') {
               setState({ phase: 'error', data: null, error });
               return;
             }
