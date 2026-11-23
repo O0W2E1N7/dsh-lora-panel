@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "LoRA 面板",
+    "description": "在左侧栏增加一个只读的 LoRA 面板。打开条目时重新读取 D:\\CreativeModels\\lora_meta.json，按 base_group 分组（MOSS、Anima、Illustrious / SDXL、Pony）把每支 LoRA 列成卡片：Civitai 标题原样保留方括号后缀，其下是版本名、别名、文件名、kind、触发词与建议权重。点击卡片复制「文件名:权重」；default_weight 为空的两支显示「权重待填」，不复制任何数字。loader 为 LoraLoader 的卡片标注「需串联 CLIP」。面板不写入任何文件、不读取其它路径；关闭插件即移除侧栏条目与该页面。"
+  }
+}

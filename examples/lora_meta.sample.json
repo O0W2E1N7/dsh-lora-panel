@@ -1,0 +1,29 @@
+{
+  "BunnySlop_MOSS.safetensors": {
+    "alias": "slopm",
+    "base": "MOSS Image",
+    "base_group": "MOSS",
+    "kind": "style",
+    "civitai_title": "BunnySlop AI Style 『MOSS | Anima | Illustrious』",
+    "civitai_version": "MOSS v6.9",
+    "civitai_confidence": "exact",
+    "trigger": "@sl0p",
+    "default_weight": 0.6,
+    "loader": "LoraLoaderModelOnly",
+    "note": "Stylised volume and gloss. Above 0.9 the halo and composition start to break."
+  },
+  "SomeCharacter_Anima_v2.safetensors": {
+    "alias": "char2",
+    "base": "Anima",
+    "base_group": "Anima",
+    "kind": "character",
+    "civitai_title": "Some Character — Anima LoRA",
+    "civitai_version": "v2.0",
+    "civitai_confidence": "exact",
+    "trigger": "",
+    "trigger_alt": "trigger word not confirmed by the author yet",
+    "default_weight": null,
+    "loader": "LoraLoader",
+    "note": "Carries text-encoder weights, so chain CLIP as well as MODEL."
+  }
+}
