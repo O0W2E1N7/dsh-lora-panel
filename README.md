@@ -50,7 +50,7 @@ both register `GET /lora-panel/meta` and DSH will refuse the duplicate route.
    ```
 
 2. Add that directory as a local bundle through the **Plugins** page, using the absolute path in
-   `file:` form, e.g. `file:D:/Pictures/AI Generated/dsh-lora-panel`. DSH links it into the profile's
+   `file:` form, e.g. `file:/absolute/path/to/dsh-lora-panel`. DSH links it into the profile's
    `node_modules`, reads `dsh.bundle.patch` from `package.json`, and applies the one line in
    `cordis.patch.yml`.
 3. Restart DSH when the entry reports `restart-required`.
