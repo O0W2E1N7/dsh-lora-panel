@@ -1,5 +1,7 @@
 # dsh-lora-panel
 
+[**English**](README.md) | [简体中文](README.zh-CN.md)
+
 A read-only LoRA catalogue for the DeepSeek Harness left sidebar.
 
 With a few dozen LoRAs on disk, the annoying part is remembering which file is which: the filenames
