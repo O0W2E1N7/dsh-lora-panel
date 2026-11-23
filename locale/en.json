@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "LoRA panel",
-    "description": "Adds a read-only LoRA panel to the left sidebar. Opening its entry re-reads D:\\CreativeModels\\lora_meta.json and lists every LoRA as a card grouped by base_group (MOSS, Anima, Illustrious / SDXL, Pony): the Civitai title with its bracket suffix kept verbatim, then version, alias, file name, kind, trigger words and default weight. Clicking a card copies \"file:weight\"; an entry whose default_weight is null shows \"Weight missing\" and copies nothing. A card whose loader is LoraLoader is marked as needing CLIP in the chain as well. The panel writes no file and reads no other path; disabling the plugin removes the sidebar entry and its page."
+    "description": "Adds a read-only LoRA panel to the left sidebar. Open “LoRA panel” in the left sidebar and it re-reads D:\\CreativeModels\\lora_meta.json on every entry — set LORA_PANEL_META before starting DSH to point at a different file — then lists every LoRA as a card grouped by base_group (MOSS, Anima, Illustrious / SDXL, Pony): the Civitai title with its bracket suffix kept verbatim, then version, alias, file name, kind, trigger words and default weight. Clicking a card copies “file:weight”; an entry without a finite numeric weight shows “Weight missing” and copies nothing. A card whose loader is LoraLoader is marked as needing CLIP in the chain as well. The panel writes no file and reads no other path; disabling the plugin removes the sidebar entry and its page."
   }
 }
